@@ -13,11 +13,28 @@ html, body, app-root, .site {
 
 main{
     flex: 1;
-    background: red
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-content:space-between;
+    align-items: center
 }
 header{
     background-color: green
 }
 footer{
     background-color: gold
+}
+
+main div {
+    width:200px;
+    height: 200px;
+    background-color: cyan;
+    margin:10px
+}
+
+.box{
+    width:300px;
+    height:300px;
 }
