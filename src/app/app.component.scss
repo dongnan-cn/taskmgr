@@ -1,3 +1,7 @@
 mat-sidenav {
     width: 300px
 }
+//可以绑定切换后的样式，即切换到这个样式时显示
+mat-sidenav-container.myapp-dark-theme {
+    background-color: black
+}

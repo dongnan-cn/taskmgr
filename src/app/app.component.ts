@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'taskmgr';
+  useDarkTheme = false
+
+  switchTheme(checked:boolean) {
+    this.useDarkTheme = checked
+  }
 }
