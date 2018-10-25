@@ -1,7 +1,7 @@
-<app-project-item *ngFor="let prj of projects" [item]="prj" class="project-card">
+<app-project-item *ngFor="let prj of projects" [item]="prj" class="project-card" (onInvite)="launchInviteDialog()">
 
 </app-project-item>
 
-<button class="fab-button" md-fab type="button" (click)="openNewProjectDialog()">
+<button mat-fab class="fab-button" type="button" (click)="openNewProjectDialog()">
   <mat-icon>add</mat-icon>
 </button>
