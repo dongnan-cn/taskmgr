@@ -12,6 +12,7 @@ import { SharedModule } from '../shared/shared.module';
     ProjectRoutingModule
   ],
   declarations: [ProjectListComponent, ProjectItemComponent, NewProjectComponent, InviteComponent],
+  //对话框组件要放到entryComponents中
   entryComponents: [NewProjectComponent, InviteComponent]
 })
 export class ProjectModule { }
