@@ -14,17 +14,22 @@ export class TaskHomeComponent implements OnInit {
       tasks: [
         {
           id: 1,
-          desc: "buy some coffee",
+          completed: false,
+          desc: "buy some coffee,if you go, just go asap",
+          priority:3,
           owner: {
             id: 1,
             name: "zhangsan",
             avatar: "avatars:svg-8"
           },
-          dueDate: new Date()
+          dueDate: new Date(),
+          reminder: new Date()
         },
         {
           id: 2,
+          completed: true,
           desc: "buy some food",
+          priority:2,
           owner: {
             id: 1,
             name: "lisi",
@@ -40,23 +45,30 @@ export class TaskHomeComponent implements OnInit {
       tasks: [
         {
           id: 1,
+          completed: true,
           desc: "buy some coffee",
+          priority:1,
           owner: {
             id: 1,
+            
             name: "zhangsan",
             avatar: "avatars:svg-8"
           },
-          dueDate: new Date()
+          dueDate: new Date(),
+          reminder: new Date()
         },
         {
           id: 2,
+          completed: false,
           desc: "buy some food",
+          priority:2,
           owner: {
             id: 1,
             name: "lisi",
             avatar: "avatars:svg-8"
           },
-          dueDate: new Date()
+          dueDate: new Date(),
+          reminder: new Date()
         }
       ]
     }
