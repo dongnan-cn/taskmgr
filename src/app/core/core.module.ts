@@ -7,7 +7,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { loadSvgResource } from '../utils/svg.utils';
 import { SharedModule } from '../shared/shared.module';
 import { MatIconRegistry } from '@angular/material';
-
+import 'hammerjs'
 @NgModule({
   imports: [
     SharedModule
