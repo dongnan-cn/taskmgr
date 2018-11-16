@@ -8,7 +8,7 @@ import { AppRoutingModule } from '../app.routing.module';
 import { loadSvgResource } from '../utils/svg.utils';
 import { SharedModule } from '../shared/shared.module';
 import { MatIconRegistry } from '@angular/material';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import 'hammerjs'
 @NgModule({
@@ -28,6 +28,9 @@ import 'hammerjs'
     SidebarComponent,
     AppRoutingModule,
     BrowserAnimationsModule
+  ],
+  providers: [
+    { provide: 'BASE_CONFIG', useValue: "http://localhost:3000" }
   ]
 })
 export class CoreModule {
