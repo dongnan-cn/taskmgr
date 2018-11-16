@@ -1,7 +1,8 @@
 import { Directive, HostListener, ElementRef, Renderer2, Input } from '@angular/core';
+import { DragDropService } from '../drag-drop.service';
 
 @Directive({
-  selector: '[app-draggable][draggedClass]'
+  selector: '[app-draggable][dragTag][dragData][draggedClass]'
 })
 export class DragDirective {
   private _isDraggable = false
@@ -9,7 +10,7 @@ export class DragDirective {
   @Input('app-draggable')
   set isDraggable(val: boolean) {
     this._isDraggable = val
-    this.rd.setAttribute(this.el.nativeElement,'draggable',`${val}`)
+    this.rd.setAttribute(this.el.nativeElement, 'draggable', `${val}`)
   }
   get isDraggable() {
     return this._isDraggable
@@ -17,7 +18,12 @@ export class DragDirective {
 
 
   @Input() draggedClass: string
-  constructor(private el: ElementRef, private rd: Renderer2) { }
+  @Input() dragTag: string
+  @Input() dragData: any
+  constructor(
+    private el: ElementRef,
+    private rd: Renderer2,
+    private service: DragDropService) { }
 
   @HostListener('dragstart', ['$event'])
   ondragstart(ev: Event) {
@@ -25,6 +31,7 @@ export class DragDirective {
     if (this.el.nativeElement === ev.target) {
       //向这个引用的element添加一个class
       this.rd.addClass(this.el.nativeElement, this.draggedClass)
+      this.service.setDragData({ tag: this.dragTag, data: this.dragData })
     }
   }
   @HostListener('dragend', ['$event'])
