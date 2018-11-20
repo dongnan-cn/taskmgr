@@ -122,13 +122,17 @@ export class TaskHomeComponent implements OnInit {
       case 'task-list':
         console.log('handling list')
         const srcList = srcData.data;
+        // change the order of the lists
         const tempOrder = srcList.order
         srcList.order = list.order
         list.order = tempOrder
         break;
-
       default:
         break;
     }
+  }
+
+  handleQuickTask(desc: string) {
+    console.log(desc)
   }
 }
