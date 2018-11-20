@@ -57,9 +57,12 @@ import { ImageListSelectComponent } from './image-list-select/image-list-select.
     MatSidenavModule,
     DirectiveModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ImageListSelectComponent
   ],
-  entryComponents:[ConfirmDialogComponent],
-  declarations: [ConfirmDialogComponent, ImageListSelectComponent]
+  entryComponents: [ConfirmDialogComponent],
+  declarations: [
+    ConfirmDialogComponent,
+    ImageListSelectComponent]
 })
 export class SharedModule { }
